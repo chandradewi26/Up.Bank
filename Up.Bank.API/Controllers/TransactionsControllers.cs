@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Up.Bank.BusinessLogic.Logic;
 
 namespace Up.Bank.API.Controllers
 {
@@ -13,13 +14,17 @@ namespace Up.Bank.API.Controllers
     {
         [HttpGet]
         public IActionResult GetTransaction()
-            //Could be OK result or Error result - 200 - 400 - HTTP Status
+            //Could be OK result or Error result - 200 - 404 500 - HTTP Status
         {
-            return Ok("Success!!");
+            var _TransactionLogic = new TransactionLogic();
+            //_TransactionLogic.GetNewTransaction();
+
+
+            return Ok(_TransactionLogic.GetNewTransaction());
+
         }
-
-
-
+        // Have to do homework
+        // For Account, domain model account, account logic, account controller,
 
     }
     
