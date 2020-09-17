@@ -6,7 +6,8 @@ namespace Up.Bank.BusinessLogic.DomainModel
     {
         public Transaction()
         {
-
+            Description = "Theres no transaction stored.";
+            Value = 0;
         }
 
         public Transaction(string description, decimal value)
