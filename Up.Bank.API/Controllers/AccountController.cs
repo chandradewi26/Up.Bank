@@ -32,7 +32,6 @@ namespace Up.Bank.API.Controllers
     }
 
 
-    public class AccountController
-    {
-    }
+    //public class AccountController
+
 }
