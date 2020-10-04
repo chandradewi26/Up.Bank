@@ -13,7 +13,7 @@ namespace Up.Bank.BusinessLogic.Logic
 
         public Account GetNewAccount()
         {
-            var account1 = new Account(1999767676, "Chandra", "Dewi", "2A Elsie Street");
+            var account1 = new Account("Tuition Fee", "Savings", 50000);
 
             return account1;
         }

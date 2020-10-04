@@ -11,18 +11,18 @@ namespace Up.Bank.BusinessLogic.DomainModel
         public Account()
         {
             DisplayName = "No Account were stored yet"; // Account Name - Savings, Tuition Fee, etc.
-            Value = 0;
             AccountType = "Saver / Transactional";
+            Value = 0;
         }
 
-        public Account(decimal value, string name, string type)
+        public Account(string name, string type, decimal value)
         {
             if (value < 0)
                 throw new Exception("Value invalid, value cant be lower than 0");
 
             DisplayName = name;
-            Value = value;
             AccountType = type;
+            Value = value;
         }
         public string DisplayName { get; set; }
         public string AccountType { get; set; }
